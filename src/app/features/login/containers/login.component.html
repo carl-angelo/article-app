@@ -1,0 +1,28 @@
+<div class="container">
+  <mat-grid-list cols="1" rowHeight="3:1">
+    <mat-grid-tile>
+      <mat-card class="card-container">
+        <mat-card-title> Login </mat-card-title>
+        <mat-card-content>
+          <span *ngIf="error" class="error-message"> {{ error }} </span>
+          <form [formGroup]="loginForm" class="block-form">
+            <mat-form-field class="block-form__input">
+              <input matInput placeholder="Email" formControlName="email" controlType="email" required=true [email]="true"/>
+            </mat-form-field>
+            <mat-form-field class="block-form__input">
+              <input matInput placeholder="Username" formControlName="username" controlType="username" required=true />
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="submitForm()">Login</button>
+          </form>
+        </mat-card-content>
+        <div *ngIf="showLoadingOverlay" class="loading-overlay">
+          <mat-grid-list *ngIf="!articles" cols="1" rowHeight="2:1">
+            <mat-grid-tile>
+                <mat-spinner diameter="50"></mat-spinner>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

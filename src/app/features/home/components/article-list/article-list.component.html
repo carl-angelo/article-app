@@ -1,0 +1,14 @@
+<mat-grid-list cols="12" rowHeight="130px" *ngIf="articles" (window:resize)="onResize($event)">
+  <mat-grid-tile [colspan]="breakpoint" [rowspan]="1" class="tile-container" *ngFor="let article of articles">
+    <mat-card class="card-container" (click)="selectArticle(article)">
+      <mat-card-title> {{ article.title }} </mat-card-title>
+      <mat-card-content> {{ article.body }} </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list *ngIf="!articles" cols="1" rowHeight="3:1">
+  <mat-grid-tile>
+      <mat-spinner diameter="50"></mat-spinner>
+  </mat-grid-tile>
+</mat-grid-list>

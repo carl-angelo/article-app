@@ -1,0 +1,27 @@
+.search-container {
+    margin: 0px 10px 10px;
+    display: inline-block;
+
+    &__label {
+        margin-right: 10px;
+    }
+
+    &__input {
+        width: 300px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 724px) {
+    .search-container {
+        &__input, &__select {
+            width: 100px;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .search-container {
+        margin: 0px;
+    }
+}

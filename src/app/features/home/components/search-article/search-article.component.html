@@ -1,0 +1,16 @@
+<div class="search-container">
+  <form [formGroup]="searchFormGroup">
+    <label class="search-container__label">Search:</label>
+    <mat-form-field class="search-container__input">
+      <input matInput placeholder="Input" formControlName="searchValue">
+      <button mat-button *ngIf="true" matSuffix mat-icon-button aria-label="Clear" (click)="clearSearchValue()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-form-field class="search-container__select">
+      <mat-select placeholder="Select" formControlName="searchKey">
+        <mat-option *ngFor="let option of selectList" value="{{option.key}}">{{ option.value }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</div>

@@ -1,0 +1,18 @@
+.container {
+    position: relative;
+}
+
+.block-form {
+    &__input {
+        width: 100%;
+
+        &_textarea {
+            height: 100px;
+        }
+    }
+
+    &_button {
+        float: right;
+        margin-left: 5px;
+    }
+}

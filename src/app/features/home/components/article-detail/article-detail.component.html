@@ -1,0 +1,23 @@
+
+<div class="container">
+  <h1> {{ data.mode }} </h1>
+  <div class="block-form">
+    <form [formGroup]="detailForm">
+      <mat-form-field class="block-form__input">
+        <input matInput placeholder="Title" formControlName="title" required=true />
+      </mat-form-field>
+      <mat-form-field class="block-form__input">
+        <textarea matInput placeholder="Body" class="block-form__input_textarea" formControlName="body"></textarea>
+      </mat-form-field>
+      <button class="block-form_button" mat-raised-button color="primary" (click)="submitForm()">Submit</button>
+      <button class="block-form_button" mat-raised-button mat-dialog-close color="secondary">Cancel</button>
+    </form>
+  </div>
+  <div *ngIf="showLoadingOverlay" class="loading-overlay">
+    <mat-grid-list *ngIf="!articles" cols="1" rowHeight="2:1">
+      <mat-grid-tile>
+          <mat-spinner diameter="50"></mat-spinner>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>

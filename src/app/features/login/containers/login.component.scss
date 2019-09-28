@@ -1,0 +1,22 @@
+.block-form {
+    &__input {
+        width: 100%;
+    }
+
+    // &_button {
+    //     float: right;
+    //     margin-left: 5px;
+    // }
+}
+
+.card-container {
+    padding: 40px;
+}
+
+.container {
+    position: relative;
+}
+
+.error-message {
+    color: red;
+}

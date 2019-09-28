@@ -1,0 +1,18 @@
+.card-container {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.tile-container {
+    box-sizing: content-box;
+}
+
+.loading {
+    &-wrapper{
+        display: inline-block;
+        margin: auto;
+    }
+}
