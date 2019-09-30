@@ -1,19 +1,17 @@
 import { TestBed, async } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing'
-import { AppComponent } from './app.component';
+import { ArticleListComponent } from './article-list.component';
 
-describe('AppComponent', () => {
+describe('Article List Component', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        ArticleListComponent
       ],
-      imports: [ RouterTestingModule ]
     }).compileComponents();
   }));
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+    const fixture = TestBed.createComponent(ArticleListComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
